@@ -1,6 +1,6 @@
 import React from "react";
 import { Grid, GridItem } from "@chakra-ui/react";
-import { Header, Menu } from "../components";
+import { Header, Menu, MenuRight } from "../components";
 
 export const Layout = () => {
   return (
@@ -16,7 +16,9 @@ export const Layout = () => {
         <Menu />
       </GridItem>
       <GridItem colSpan={2} rowSpan={4} bg="yellow" />
-      <GridItem colSpan={1} rowSpan={4} bg="pink" />
+      <GridItem colSpan={1} rowSpan={4}>
+        <MenuRight />
+      </GridItem>
       <GridItem colSpan={4} rowSpan={1} bg="blue" />
     </Grid>
   );

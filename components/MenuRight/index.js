@@ -3,10 +3,10 @@ import { Box, Button, Input, Select, Text, Textarea } from "@chakra-ui/react";
 import styled from "styled-components";
 
 const Option = styled("option")`
-  color: #051d3b;
+  color: black;
 `;
 
-export const MenuRight = () => {
+export const MenuRight = ({ onChange, bgColor }) => {
   const techs = ["JavaScript", "CSS 3", "HTML 5", "ReactJs"];
 
   return (
@@ -55,7 +55,7 @@ export const MenuRight = () => {
           <Option key={tech.toLowerCase()}>{tech}</Option>
         ))}
       </Select>
-      <Input mt={4} type="color" />
+      <Input mt={4} type="color" value={bgColor} onChange={onChange} />
       <Button bg="#5081FB" color="#051D3B" w="100%" mt={4}>
         Salvar projeto
       </Button>

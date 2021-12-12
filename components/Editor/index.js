@@ -1,12 +1,17 @@
-import React from "react";
-import { Box, Textarea, Img, Button } from "@chakra-ui/react";
+import React, { useState } from "react";
+import { Box, Textarea, Img, Button, color } from "@chakra-ui/react";
 
-export const Editor = () => {
-  const defaultValue = `const HelloWorld = () => {
+export const Editor = ({ bgColor }) => {
+  const [value, setValue] = useState(`const HelloWorld = () => {
     return (
       <div>Hello World</div>
     )
-  }`;
+  }`);
+
+  const onChange = ({ value }) => {
+    return setValue(value);
+  };
+
   return (
     <Box
       background="#051D3B"
@@ -15,7 +20,7 @@ export const Editor = () => {
       width="100%"
       padding="0 20px"
     >
-      <Box w="100%" h="100%" bg="green" borderRadius="8px">
+      <Box w="100%" h="100%" bg={bgColor} borderRadius="8px">
         <Box
           w="100%"
           h="100%"
@@ -35,7 +40,8 @@ export const Editor = () => {
             bg="black"
             color="white"
             resize="none"
-            value={defaultValue}
+            value={value}
+            onChange={(ev) => onChange(ev.target)}
             _focus={{
               boxShadow: 0,
             }}

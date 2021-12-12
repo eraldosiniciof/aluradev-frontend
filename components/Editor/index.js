@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Textarea, Img } from "@chakra-ui/react";
+import { Box, Textarea, Img, Button } from "@chakra-ui/react";
 
 export const Editor = () => {
   const defaultValue = `const HelloWorld = () => {
@@ -42,6 +42,9 @@ export const Editor = () => {
           />
         </Box>
       </Box>
+      <Button bg="#5081FB" color="#051D3B" w="100%" mt={4}>
+        Visualizar com o highlight
+      </Button>
     </Box>
   );
 };

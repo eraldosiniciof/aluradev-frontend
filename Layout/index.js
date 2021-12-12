@@ -5,11 +5,11 @@ import { Header, Menu, MenuRight, Editor } from "../components";
 export const Layout = () => {
   return (
     <Grid
-      h="95vh"
+      h="100vh"
       templateRows="repeat(6, 1fr)"
       templateColumns="repeat(4, 1fr)"
     >
-      <GridItem colSpan={4} rowSpan={1} bg="#051D3B>">
+      <GridItem colSpan={4} rowSpan={1} bg="#051D3B">
         <Header />
       </GridItem>
       <GridItem colSpan={1} rowSpan={4} bg="red">
@@ -21,7 +21,7 @@ export const Layout = () => {
       <GridItem colSpan={1} rowSpan={4}>
         <MenuRight />
       </GridItem>
-      <GridItem colSpan={4} rowSpan={1} bg="blue" />
+      <GridItem colSpan={4} rowSpan={1} bg="#051D3B" />
     </Grid>
   );
 };

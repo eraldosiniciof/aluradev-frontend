@@ -13,13 +13,7 @@ export const Editor = ({ bgColor }) => {
   };
 
   return (
-    <Box
-      background="#051D3B"
-      color="#ffffff"
-      height="100%"
-      width="100%"
-      padding="0 20px"
-    >
+    <Box height="100%" width="100%">
       <Box w="100%" h="100%" bg={bgColor} borderRadius="8px">
         <Box
           w="100%"
@@ -36,7 +30,7 @@ export const Editor = ({ bgColor }) => {
             border="0"
             borderRadius="0 0 8px 8px"
             w="90%"
-            h="85%"
+            h="79%"
             bg="black"
             color="white"
             resize="none"

@@ -1,5 +1,6 @@
 import React from "react";
 import { Box, Link, Text, Img } from "@chakra-ui/react";
+import { Title } from "../Title";
 
 const ItemMenu = ({ value, image }) => {
   return (
@@ -23,10 +24,10 @@ export const Menu = () => {
       background="#051D3B"
       color="#ffffff"
       height="100%"
-      width="100%"
+      width="60%"
       padding="0 20px"
     >
-      <Text>MENU</Text>
+      <Title title="MENU" />
       <ItemMenu value="Editor de Código" image="/editor.png" />
       <ItemMenu value="Comunidade" image="/comunity.png" />
     </Box>
